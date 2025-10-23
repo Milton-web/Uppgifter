@@ -27,6 +27,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      # kör lint
+      - name: Lint code
+        run: npm run Lint
+
       # Kör tester
       - name: Run tests
         run: npm test

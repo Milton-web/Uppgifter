@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "exlint",
     "start": "echo \"Running tests...\" && exit 0",
     "test": "echo \"No tests yet\"",
     "build": "echo \"Building project...\""
@@ -18,8 +19,11 @@
   "bugs": {
     "url": "https://github.com/Milton-web/Uppgifter/issues"
   },
-  "homepage": "https://github.com/Milton-web/Uppgifter#readme"
-
-  
-
+  "homepage": "https://github.com/Milton-web/Uppgifter#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.38.0",
+    "eslint": "^9.38.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.4.0"
+  }
 }
