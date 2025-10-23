@@ -17,8 +17,8 @@ jobs:
       # Skriv ut brachnamn i loggen samt användaren
       - name: Print branch
         run: |
-        echo "Running on branch: ${{ github.ref_name }}"
-        echo "By user: ${{ github.actor }}"
+          echo "Running on branch: ${{ github.ref_name }}"
+          echo "By user: ${{ github.actor }}"
 
       # Installera Node.js 
       - name: Setup Node.js
