@@ -8,20 +8,21 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: Uppgifter # kör kommando i root efter jag fick error exit code 254
 
     steps:
       # Hämta koden
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Skriv ut brachnamn i loggen samt användaren
+      # Skriv ut branchnamn och användare
       - name: Print branch
         run: |
           echo "Running on branch: ${{ github.ref_name }}"
           echo "By user: ${{ github.actor }}"
+
+      # Debug (kan tas bort senare)
+      - name: List files
+        run: ls -R
 
       # Installera Node.js 
       - name: Setup Node.js
@@ -33,7 +34,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Kör tester
+      # Kör tester (ta bort om du inte har några)
       - name: Run tests
         run: npm test
 
