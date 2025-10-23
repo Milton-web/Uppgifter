@@ -42,3 +42,7 @@ jobs:
       # Bekräftar att pipelinen klarat alla steg
       - name: Pipeline success
         run: echo "Pipeline finished, all steps passed!"
+
+      - name: Deploy
+        run: echo "Simulerar en deploy"
+        
