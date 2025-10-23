@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "exlint",
+    "lint": "eslint",
     "start": "echo \"Running tests...\" && exit 0",
     "test": "echo \"No tests yet\"",
     "build": "echo \"Building project...\""
