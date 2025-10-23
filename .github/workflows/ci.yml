@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: . # kör kommando i root efter jag fick error exit code 254
+        working-directory: Uppgifter # kör kommando i root efter jag fick error exit code 254
 
     steps:
       # Hämta koden
