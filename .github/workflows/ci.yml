@@ -22,13 +22,6 @@ jobs:
           echo "Running on branch: ${{ github.ref_name }}"
           echo "By user: ${{ github.actor }}"
 
-      # Fix test visar vilken map actions försöker installera i
-      - name: Check current directory
-        run: |
-          echo "Current directory:"
-          pwd
-          echo "Contents:"
-          ls -la
 
       # Installera Node.js 
       - name: Setup Node.js
