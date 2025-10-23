@@ -43,4 +43,4 @@ jobs:
       - name: Build project
         run: npm run build
 
-console.log("testing CI on pull request");
+
