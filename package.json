@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "echo \"Running tests...\" && exit 0",
-    "test": "echo \"No tests yet\"",
+    "test": "echo \"exit 1\"",
     "build": "echo \"Building project...\""
   },
   "repository": {

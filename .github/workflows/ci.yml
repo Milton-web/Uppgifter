@@ -22,6 +22,7 @@ jobs:
           echo "Running on branch: ${{ github.ref_name }}"
           echo "By user: ${{ github.actor }}"
 
+   
 
       # Installera Node.js 
       - name: Setup Node.js
@@ -34,10 +35,12 @@ jobs:
         
         run: npm install
 
-      # Kör tester (ta bort om du inte har några)
+      # Kör tester
       - name: Run tests
         run: npm test
 
       # Bygger projektet
       - name: Build project
         run: npm run build
+
+console.log("testing CI on pull request");
