@@ -10,24 +10,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Hämta koden
+      # Hämta koden
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2️⃣ Installera Node.js version 18
+      # Skriv ut brachnamn i loggen samt användaren
+      - name: Print branch
+        run: |
+        echo "Running on branch: ${{ github.ref_name }}"
+        echo "By user: ${{ github.actor }}"
+
+      # Installera Node.js 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      # 3️⃣ Installera dependencies
+      # Installera dependencies
       - name: Install dependencies
         run: npm install
 
-      # 4️⃣ Kör tester
+      # Kör tester
       - name: Run tests
         run: npm test
 
-      # 5️⃣ Bygg projektet
+      # Bygger projektet
       - name: Build project
         run: npm run build
