@@ -1,0 +1,21 @@
+name: Info Workflow
+
+on: 
+  push: 
+    branches: 
+     - main
+
+jobs: 
+  builds-and-tests: 
+    runs-on: ubuntu-latest
+    
+    steps: 
+      # Checkar ut koden
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Skriver ut branchnamn och användare.
+      - name: Print branch
+        run: | 
+          echo "Running on branch: ${{ github.ref.name }}"
+          echo "By user: ${{ github.actor }}"
